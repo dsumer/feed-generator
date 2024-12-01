@@ -15,6 +15,7 @@ migrations['001'] = {
       .addColumn('uri', 'varchar', (col) => col.primaryKey())
       .addColumn('cid', 'varchar', (col) => col.notNull())
       .addColumn('indexedAt', 'varchar', (col) => col.notNull())
+      .addColumn('isReply', 'boolean', (col) => col.notNull().defaultTo(false))
       .execute()
     await db.schema
       .createTable('sub_state')
