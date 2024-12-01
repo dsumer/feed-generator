@@ -7,7 +7,7 @@ export type Post = {
   uri: string
   cid: string
   indexedAt: string
-  isReply: boolean
+  isReply: number
 }
 
 export type SubState = {

@@ -54,7 +54,7 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
         return isPeerMaker
       })
       .map((create) => {
-        const isReply = create.record.reply !== undefined
+        const isReply = create.record.reply !== undefined ? 1 : 0
         return {
           uri: create.uri,
           cid: create.cid,

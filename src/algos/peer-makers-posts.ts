@@ -10,7 +10,7 @@ export const handler = async (ctx: AppContext, params: QueryParams) => {
     .selectAll()
     .orderBy('indexedAt', 'desc')
     .orderBy('cid', 'desc')
-    .where('isReply', '=', false)
+    .where('isReply', '=', 0)
     .limit(params.limit)
 
   if (params.cursor) {
